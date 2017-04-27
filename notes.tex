@@ -19,10 +19,10 @@
 
 \input{meta.tex}
 % Meta
-\author{\Author}
+%\author{\Author}
 \title{\Title}
 
-% Means that I don't have to type \marginpar{\raggedright \scriptsize every 
+% Means that I don't have to type \marginpar{\raggedright \scriptsize every
 % time I want a margin paragraph
 \makeatletter
 \renewcommand{\@marginparreset}{%
@@ -34,6 +34,12 @@
 
 \begin{document}
 % Set the headers
+\maketitle
+
+
+%%%%%%%%
+\iffalse
+%%%%%%%%
 \rhead{\title}
 \chead{}
 
@@ -49,7 +55,7 @@
 
 % Get the course info
 \courseinfo
-\newpage
+\vspace{\fill}
 
 % Enable multicol
 \multicolstrue
@@ -62,6 +68,10 @@
 
 % Restore the extra margin geometry
 \restoregeometry
+
+%%%
+\fi
+%%%
 
 \input{content.tex}
 
