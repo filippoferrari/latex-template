@@ -44,9 +44,21 @@
 \usepackage{float}
 % For standalone tikz
 \usepackage{standalone}
+% For superscript
+\usepackage[super]{nth}
 % For page break in align tags
 \allowdisplaybreaks
-
+% For syntactic trees
+\usepackage{qtree}
+% For fancy parenthesis
+\usepackage{stmaryrd}
+% For proofs
+\usepackage{bussproofs}
+% For fancy math letters
+\usepackage{ mathrsfs }
+\usepackage{ amssymb }
+% For monospace fonts
+\newcommand{\mo}[1] {\texttt{#1}}
 
 % Set up listings
 \usepackage{color}
@@ -55,9 +67,11 @@
 \usepackage{caption}
 \usepackage[T1]{fontenc}
 \usepackage[variablett]{lmodern}
-\input{scala_listing.tex}
-\definecolor{OliveGreen}{RGB}{60,128,49}
-\DeclareCaptionFont{white}{\color{white}}
-\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
-\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
-\lstset{language=Scala,captionpos=b,tabsize=1,frame=lines,keywordstyle=\color{blue},commentstyle=\color{OliveGreen},stringstyle=\color{red},numbers=left,numberstyle=\tiny,numbersep=1pt,breaklines=true,showstringspaces=false,basicstyle=\footnotesize,emph={label}}
+%\input{scala_listing.tex}
+%\definecolor{OliveGreen}{RGB}{60,128,49}
+%\DeclareCaptionFont{white}{\color{white}}
+%\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+%\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+%\lstset{language=Scala,captionpos=b,tabsize=1,frame=lines,keywordstyle=\color{blue},commentstyle=\color{OliveGreen},stringstyle=\color{red},numbers=left,numberstyle=\tiny,numbersep=1pt,breaklines=true,showstringspaces=false,basicstyle=\footnotesize,emph={label}}
+
+\DeclareMathOperator{\dom}{dom}
