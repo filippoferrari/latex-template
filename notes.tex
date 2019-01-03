@@ -15,9 +15,10 @@
 \usepackage[pdftex]{hyperref}
 
 % Import the packages for the notes
-\input{packages.tex}
+\input{packages/packages.tex}
 
-\input{meta.tex}
+\input{meta/meta.tex}
+
 % Meta
 \author{\Author}
 \title{\Title}
@@ -27,8 +28,8 @@
 \makeatletter
 \renewcommand{\@marginparreset}{%
   \reset@font\scriptsize
-  \raggedright
-  \@setminipage
+  \raggedright{}
+  \@setminipage{}
 }
 \makeatother
 
@@ -36,13 +37,13 @@
 \pgfplotsset{compat=1.14}
 
 \begin{document}
+
+%%%%%%%%
 % Set the headers
-\maketitle
-
-
+% \maketitle
+% \iffalse{}
 %%%%%%%%
-\iffalse
-%%%%%%%%
+
 \rhead{\title}
 \chead{}
 
@@ -57,11 +58,11 @@
 \maketitle
 
 % Get the course info
-\courseinfo
+\courseinfo{}
 \vspace{\fill}
 
 % Enable multicol
-\multicolstrue
+\multicolstrue{}
 
 % Save pages in large documents by having a multicolumn table of contents!
 \begin{mymulticols}
@@ -70,12 +71,12 @@
 \newpage
 
 % Restore the extra margin geometry
-\restoregeometry
+\restoregeometry{}
 
 %%%
-\fi
+% \fi
 %%%
 
-\input{content.tex}
+\input{content/part1.tex}
 
 \end{document}
