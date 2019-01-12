@@ -105,3 +105,20 @@
 \DeclareMathOperator{\degree}{deg}
 \DeclareMathOperator{\indeg}{indeg}
 \DeclareMathOperator{\outdeg}{outdeg}
+
+\usepackage{amsthm}
+\newtheoremstyle{slplain}% name
+  {.75\baselineskip\@plus.2\baselineskip\@minus.2\baselineskip}% Space above
+  {.2\baselineskip\@plus.2\baselineskip\@minus.2\baselineskip}% Space below
+  {\itshape}% Body font
+  {}%Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}%  Thm head font
+  {.}%       Punctuation after thm head
+  { }%      Space after thm head: " " = normal interword space;
+        %       \newline = linebreak
+  {}%       Thm head spec
+
+\theoremstyle{slplain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
